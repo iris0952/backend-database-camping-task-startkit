@@ -30,27 +30,25 @@ WHERE email IN
 'starplatinum@hexschooltest.io')
 AND ROLE = 'USER';
 -- 1-3 刪除：刪除USER 資料表中，用 Email 找到透明人，並刪除該筆資料
-delete 
-from "USER" 
-where 
-	email = 'opacity0@hexschooltest.io';
+DELETE FROM "USER" 
+WHERE email = 'opacity0@hexschooltest.io';
 -- 1-4 查詢：取得USER 資料表目前所有用戶數量（提示：使用count函式）
--- SELECT count(*) as 用戶數量 from "USER";
--- -- 1-5 查詢：取得 USER 資料表所有用戶資料，並列出前 3 筆（提示：使用limit語法）
--- SELECT * FROM "USER"
--- LIMIT 3;
+SELECT count(*) as 用戶數量 from "USER";
+-- 1-5 查詢：取得 USER 資料表所有用戶資料，並列出前 3 筆（提示：使用limit語法）
+SELECT * FROM "USER"
+LIMIT 3;
 
--- --  ████████  █████   █    ████  
--- --    █ █   ██    █  █         █ 
--- --    █ █████ ███ ███       ███  
--- --    █ █   █    ██  █     █     
--- --    █ █   █████ █   █    █████ 
--- -- ===================== ====================
--- -- 2. 組合包方案 CREDIT_PACKAGE、客戶購買課程堂數 CREDIT_PURCHASE
--- -- 2-1. 新增：在`CREDIT_PACKAGE` 資料表新增三筆資料，資料需求如下：
---     -- 1. 名稱為 `7 堂組合包方案`，價格為`1,400` 元，堂數為`7`
---     -- 2. 名稱為`14 堂組合包方案`，價格為`2,520` 元，堂數為`14`
---     -- 3. 名稱為 `21 堂組合包方案`，價格為`4,800` 元，堂數為`21`
+--  ████████  █████   █    ████  
+--    █ █   ██    █  █         █ 
+--    █ █████ ███ ███       ███  
+--    █ █   █    ██  █     █     
+--    █ █   █████ █   █    █████ 
+-- ===================== ====================
+-- 2. 組合包方案 CREDIT_PACKAGE、客戶購買課程堂數 CREDIT_PURCHASE
+-- 2-1. 新增：在`CREDIT_PACKAGE` 資料表新增三筆資料，資料需求如下：
+    -- 1. 名稱為 `7 堂組合包方案`，價格為`1,400` 元，堂數為`7`
+    -- 2. 名稱為`14 堂組合包方案`，價格為`2,520` 元，堂數為`14`
+    -- 3. 名稱為 `21 堂組合包方案`，價格為`4,800` 元，堂數為`21`
 -- INSERT INTO "CREDIT_PACKAGE" (name, credit_amount, price) VALUES
 -- ('7 堂組合包方案', 7, 1400),
 -- ('14 堂組合包方案',14, 2520),
