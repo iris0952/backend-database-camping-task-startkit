@@ -28,7 +28,7 @@ WHERE email IN
 ('lee2000@hexschooltest.io',
 'richman@hexschooltest.io',
 'starplatinum@hexschooltest.io')
-AND ROLE = 'USER'
+AND ROLE = 'USER';
 -- 1-3 刪除：刪除USER 資料表中，用 Email 找到透明人，並刪除該筆資料
 delete 
 from "USER" 
